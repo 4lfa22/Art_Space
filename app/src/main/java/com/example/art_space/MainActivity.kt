@@ -156,12 +156,18 @@ fun ArtworkDisplay(
     modifier: Modifier = Modifier,
     @DrawableRes currentArtwork: Int
 ) {
-    Image(
-        painter = painterResource(currentArtwork),
-        contentDescription = stringResource(id = R.string.flower),
-        modifier = modifier.fillMaxWidth(),
-        contentScale = ContentScale.FillWidth
-    )
+    Column(
+        modifier = Modifier
+            .size(width = 300.dp, height = 500.dp) // Ajusta la cantidad de espacio según lo necesites
+    ){
+        Image(
+            painter = painterResource(currentArtwork),
+            contentDescription = stringResource(id = R.string.flower),
+            modifier = modifier.fillMaxWidth(),
+            contentScale = ContentScale.FillWidth
+        )
+    }
+
 }
 
 @Composable
